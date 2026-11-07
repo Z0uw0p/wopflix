@@ -1,0 +1,36 @@
+name: Something's missing
+description: A movie or show you want added, or a feature you'd like.
+title: "[Request]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Media requests are welcome. Not everything is findable, so a request is
+        not a promise — I'll tell you if it's not going to happen.
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you want?
+      placeholder: Add the rest of The Sopranos, or make subtitles default to off.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of request is this?
+      options:
+        - A movie or show
+        - Playback or quality
+        - Subtitles or audio
+        - Interface or navigation
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Anything else?
+      description: Context, links, or how many other people want it too.
+    validations:
+      required: false

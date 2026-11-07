@@ -1,0 +1,58 @@
+name: Something's broken
+description: Playback fails, something won't load, wrong subtitles, and so on.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Don't include your password or any invite link. Everything here is public.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you expected, and what you got instead.
+      placeholder: I pressed play on a movie and it spins forever, but only on the TV.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How do I reproduce it?
+      description: The exact steps, even if they seem obvious.
+      placeholder: |
+        1. Open the TV app
+        2. Pick a movie from the 4K shelf
+        3. Press play
+        4. Spinner forever
+    validations:
+      required: false
+  - type: dropdown
+    id: device
+    attributes:
+      label: Where were you watching?
+      options:
+        - Web browser
+        - Android phone or tablet
+        - iPhone or iPad
+        - Android TV or Fire Stick
+        - Smart TV (built-in app)
+        - Apple TV
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: When did it happen?
+      description: A date and rough time helps me line it up with the logs.
+      placeholder: Tonight around 8pm
+    validations:
+      required: false
+  - type: input
+    id: title
+    attributes:
+      label: Which movie or show?
+      description: Leave blank if it's not specific to one title.
+    validations:
+      required: false
